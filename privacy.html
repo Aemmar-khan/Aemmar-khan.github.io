@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Privacy Policy — AYM Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --navy:      #1c2680;
+    --navy-2:    #141b64;
+    --navy-3:    #0d1250;
+    --navy-4:    #090c38;
+    --lime:      #d4ff3f;
+    --lime-dk:   #b8e01f;
+    --ink:       #0b0e33;
+    --cream:     #f3f1ea;
+    --white:     #ffffff;
+    --muted:     rgba(255,255,255,0.65);
+    --muted-2:   rgba(255,255,255,0.35);
+    --rule:      rgba(255,255,255,0.12);
+    --rule-soft: rgba(255,255,255,0.07);
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Inter',sans-serif;
+    background:var(--navy-4);
+    color:var(--white);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(ellipse 900px 500px at 15% 15%, rgba(212,255,63,0.07), transparent 60%),
+      radial-gradient(ellipse 900px 600px at 85% 85%, rgba(28,38,128,0.3), transparent 60%);
+    min-height:100vh;
+  }
+  a{color:var(--lime);text-decoration:none;transition:color 0.2s;}
+  a:hover{color:var(--white);}
+
+  /* Top Navigation */
+  .legal-nav{
+    padding:24px 5vw;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:1px solid var(--rule-soft);
+    background:rgba(9,12,56,0.8);
+    backdrop-filter:blur(10px);
+    position:sticky;
+    top:0;
+    z-index:100;
+  }
+  .nav-logo{display:flex;align-items:center;gap:9px;color:var(--white);}
+  .nav-logo .mark{
+    width:30px;height:30px;border-radius:7px;background:var(--lime);
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Archivo Black',sans-serif;font-size:0.85rem;color:var(--ink);
+  }
+  .nav-logo .word{font-family:'Archivo Black',sans-serif;font-size:1.05rem;letter-spacing:-0.01em;}
+  
+  .back-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.8rem;
+    font-weight:600;
+    background:rgba(255,255,255,0.06);
+    border:1px solid var(--rule);
+    padding:8px 16px;
+    border-radius:999px;
+    color:var(--white);
+    transition:all 0.2s;
+  }
+  .back-btn:hover{
+    border-color:var(--lime);
+    background:rgba(212,255,63,0.12);
+    color:var(--lime);
+  }
+
+  /* Content */
+  .legal-container{
+    max-width:880px;
+    margin:0 auto;
+    padding:60px 5vw 100px;
+  }
+  .eyebrow-pill{
+    display:inline-flex;align-items:center;gap:8px;
+    background:var(--lime);color:var(--ink);
+    font-family:'JetBrains Mono',monospace;font-weight:700;font-size:0.72rem;
+    letter-spacing:0.08em;text-transform:uppercase;
+    padding:8px 16px;border-radius:999px;margin-bottom:20px;
+  }
+  .legal-title{
+    font-family:'Archivo Black',sans-serif;
+    font-size:clamp(2.2rem, 5vw, 3.8rem);
+    line-height:1.05;
+    letter-spacing:-0.01em;
+    margin-bottom:12px;
+  }
+  .legal-date{
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.8rem;
+    color:var(--muted-2);
+    margin-bottom:48px;
+  }
+
+  .policy-card{
+    background:var(--navy-3);
+    border:1px solid var(--rule);
+    border-radius:22px;
+    padding:38px 34px;
+    margin-bottom:28px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.25);
+  }
+  .policy-card h2{
+    font-family:'Archivo Black',sans-serif;
+    font-size:1.25rem;
+    color:var(--white);
+    letter-spacing:-0.01em;
+    margin-bottom:16px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .policy-card h2 .sec-num{
+    color:var(--lime);
+    font-family:'JetBrains Mono',monospace;
+    font-size:0.9rem;
+  }
+  .policy-card p{
+    color:var(--muted);
+    font-size:0.94rem;
+    margin-bottom:16px;
+    line-height:1.75;
+  }
+  .policy-card p:last-child{margin-bottom:0;}
+  .policy-card ul{
+    margin:12px 0 16px 20px;
+    color:var(--muted);
+    font-size:0.92rem;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .policy-card strong{color:var(--white);}
+
+  .highlight-badge{
+    background:rgba(212,255,63,0.08);
+    border-left:3px solid var(--lime);
+    padding:14px 18px;
+    border-radius:0 10px 10px 0;
+    margin:16px 0;
+    font-size:0.9rem;
+    color:var(--white);
+  }
+
+  /* Footer */
+  .legal-footer{
+    text-align:center;
+    padding:40px 5vw;
+    border-top:1px solid var(--rule-soft);
+    color:var(--muted-2);
+    font-size:0.8rem;
+    font-family:'JetBrains Mono',monospace;
+  }
+
+  @media (max-width:600px){
+    .policy-card{padding:26px 20px;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="legal-nav">
+  <a href="index.html" class="nav-logo">
+    <span class="mark">A</span>
+    <span class="word">AYM</span>
+  </a>
+  <a href="index.html" class="back-btn">← Back to Website</a>
+</nav>
+
+<main class="legal-container">
+  <div class="eyebrow-pill">Legal &amp; Transparency</div>
+  <h1 class="legal-title">PRIVACY <span style="color:var(--lime);">POLICY</span></h1>
+  <p class="legal-date">Last Updated: September 2026 · AYM Agency</p>
+
+  <!-- Section 1 -->
+  <div class="policy-card">
+    <h2><span class="sec-num">01.</span> Introduction</h2>
+    <p>
+      At <strong>AYM Agency</strong> ("we", "our", or "us"), we specialize in building digital authority and custom solutions for brands. We treat your personal data and business information with the highest standard of confidentiality and respect.
+    </p>
+    <p>
+      This Privacy Policy describes how we collect, store, utilize, and protect your information when you access our website, submit an inquiry, book a strategy consultation meeting, or interact with our services.
+    </p>
+  </div>
+
+  <!-- Section 2 -->
+  <div class="policy-card">
+    <h2><span class="sec-num">02.</span> Information We Collect</h2>
+    <p>We only collect information necessary to understand your project and provide our custom solutions:</p>
+    <ul>
+      <li><strong>Contact Details:</strong> Your full name, email address, and phone number provided through our "Book a Meeting" form or direct inquiries.</li>
+      <li><strong>Project &amp; Problem Information:</strong> Detailed descriptions of the challenges, bottlenecks, goals, and technical requirements you submit to us ("We build custom solutions to your problem").</li>
+      <li><strong>Scheduling Preferences:</strong> Preferred dates and time slots chosen for your strategy sessions.</li>
+      <li><strong>Technical Data:</strong> Standard anonymized analytical information such as browser type, operating system, and timestamp of request to ensure site security and functionality.</li>
+    </ul>
+  </div>
+
+  <!-- Section 3 -->
+  <div class="policy-card">
+    <h2><span class="sec-num">03.</span> How We Use Your Information</h2>
+    <p>We use the data collected strictly for direct client service and business communication:</p>
+    <ul>
+      <li>To review your problem brief and prepare tailored strategy roadmaps before our consultation call.</li>
+      <li>To confirm, schedule, and execute your 1-on-1 strategy meetings via video call, email, or telephone.</li>
+      <li>To communicate with you via email, direct messaging, or phone regarding quotes, design proposals, project status, and customer support.</li>
+      <li>To prevent spam, protect the security of our platform, and maintain operational logs.</li>
+    </ul>
+
+    <div class="highlight-badge">
+      <strong>Zero Data Selling:</strong> We do not sell, rent, lease, or monetize your contact or project information to any third parties or advertisers under any circumstance.
+    </div>
+  </div>
+
+  <!-- Section 4 -->
+  <div class="policy-card">
+    <h2><span class="sec-num">04.</span> Data Storage &amp; Security</h2>
+    <p>
+      Meeting inquiries and booking requests are stored securely in cloud database infrastructure hosted by <strong>Supabase</strong> with encrypted transport (HTTPS/TLS) and strict Row-Level Security (RLS) policies.
+    </p>
+    <p>
+      Access to the administrative portal is guarded with authentication credentials, and only authorized agency personnel can access client lead details.
+    </p>
+  </div>
+
+  <!-- Section 5 -->
+  <div class="policy-card">
+    <h2><span class="sec-num">05.</span> Third-Party Services</h2>
+    <p>We work with trusted industry providers to deliver seamless performance:</p>
+    <ul>
+      <li><strong>Supabase Inc.:</strong> Cloud database infrastructure for storing consultation and meeting requests.</li>
+      <li><strong>Meta Platforms (Instagram):</strong> Direct client communications and creative updates.</li>
+      <li><strong>Google Fonts:</strong> Web fonts for optimal typography and visual presentation.</li>
+      <li><strong>Unsplash:</strong> High-resolution editorial photography.</li>
+    </ul>
+  </div>
+
+  <!-- Section 6 -->
+  <div class="policy-card">
+    <h2><span class="sec-num">06.</span> Your Rights &amp; Data Erasure</h2>
+    <p>You maintain full control over the personal information you entrust to us. At any time, you have the right to:</p>
+    <ul>
+      <li>Request a copy of the personal details and notes we have on record for your inquiries.</li>
+      <li>Request corrections or updates to your contact details.</li>
+      <li>Request permanent deletion of your meeting records and project submissions from our database.</li>
+    </ul>
+    <p>
+      To exercise any of these rights, simply message us on Instagram or contact us using the details below, and our team will process your request promptly.
+    </p>
+  </div>
+
+  <!-- Section 7 -->
+  <div class="policy-card">
+    <h2><span class="sec-num">07.</span> Contact Us</h2>
+    <p>For any privacy inquiries, data removal requests, or questions regarding our practices, please reach out directly:</p>
+    <p style="margin-top:12px;">
+      <strong>AYM Agency</strong><br />
+      Instagram: <a href="https://www.instagram.com/aemmar._.khan/?hl=en" target="_blank">@aemmar._.khan</a><br />
+      Location: Maharashtra, India
+    </p>
+  </div>
+</main>
+
+<footer class="legal-footer">
+  © 2026 AYM Agency. All rights reserved. · <a href="index.html">Main Website</a>
+</footer>
+
+</body>
+</html>
